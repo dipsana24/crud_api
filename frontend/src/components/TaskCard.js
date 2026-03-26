@@ -2,7 +2,6 @@ import React from 'react';
 
 const PRIORITY_COLORS = { low: '#4ade80', medium: '#fbbf24', high: '#f87171' };
 const STATUS_COLORS = { todo: '#6c63ff', in_progress: '#f59e0b', done: '#34d399' };
-const STATUS_LABELS = { todo: 'To Do', in_progress: 'In Progress', done: 'Done' };
 const PRIORITY_LABELS = { low: 'Low', medium: 'Medium', high: 'High' };
 
 export default function TaskCard({ task, onEdit, onDelete, onStatusChange }) {
