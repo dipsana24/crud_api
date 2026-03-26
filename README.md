@@ -156,6 +156,7 @@ REACT_APP_API_URL=http://localhost:8000/api
 3. Configure `ALLOWED_HOSTS` with your domain
 4. Run `npm run build` for a production React bundle
 5. Serve static files with Nginx or Whitenoise
+6. (GitHub Pages) React is deployed from `frontend/build` via `.github/workflows/pages.yml`
 
 ---
 
