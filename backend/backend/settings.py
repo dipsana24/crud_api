@@ -6,6 +6,10 @@ SECRET_KEY = 'django-insecure-change-me-in-production-abc123xyz'
 
 DEBUG = True
 
+# Deployment note:
+# When the React frontend is hosted separately (e.g. GitHub Pages),
+# the browser will make API calls from a different origin, so CORS is enabled below.
+
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
