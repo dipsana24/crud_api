@@ -158,6 +158,7 @@ REACT_APP_API_URL=http://localhost:8000/api
 5. Serve static files with Nginx or Whitenoise
 6. (GitHub Pages) React is deployed from `frontend/build` via `.github/workflows/pages.yml`
 7. (GitHub Pages) Live URL: `https://dipsana24.github.io/crud_api/`
+8. To preview the production build locally: `npx serve -s frontend/build -l 5000`
 
 ---
 
