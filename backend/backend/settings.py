@@ -10,7 +10,9 @@ DEBUG = True
 # When the React frontend is hosted separately (e.g. GitHub Pages),
 # the browser will make API calls from a different origin, so CORS is enabled below.
 
-ALLOWED_HOSTS = ['*']
+import os
+
+ALLOWED_HOSTS = ['*'] # In production, replace with your specific Render URL
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,6 +29,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,6 +78,9 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS

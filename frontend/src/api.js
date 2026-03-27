@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Where the Django API lives. On production builds, this should be set via REACT_APP_API_URL.
 const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
 
 const api = axios.create({
